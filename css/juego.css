@@ -29,12 +29,32 @@ li::before {
   background: #FFF;
   padding: 30px;
   color: #000;
+  /*box-sizing: border-box;
+  width: 40%;
+  float:left;*/
+}
+/*.col-60 {
+  box-sizing: border-box;
+  width: 60%;
+  float:right;
+  padding-left: 3%;
+  background-color: rgb(229, 240, 17);
+}*/
+
+#pie {
+  clear:both;
 }
 
-#juego div {
 
+#juego div {
   text-align: center;
   animation: fadein 2s;
+  }
+
+#juego {
+  width: 600px;
+  height: 600px;
+  background-color: rgb(85, 196, 39);
 }
 
 @keyframes fadein {
