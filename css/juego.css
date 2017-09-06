@@ -17,7 +17,7 @@ li {
 }
 li::before {
   content: "• ";
-  color: #EC6778;
+  color: 	#4d6a67;
 }
 
 .col-40, .col-60 {
@@ -48,6 +48,32 @@ li::before {
   float: left;
 }
 
+h1 {
+  background-color: rgb(77,106,103);
+  color: rgb(245,245,220);
+  font-size: 180%;
+  letter-spacing: 3px;
+  padding-left: 5%;
+}
+
+h2 {
+  color: rgb(116,144,121);
+}
+
+#instrucciones li {
+  font-weight: bold;
+  font-size: 100%;
+}
+
+#pie p {
+  background-color: #32514e;
+  font-weight: bold;
+  color: #ffffff;
+  clear:both;
+  height: 15%;
+  margin-top: 0%;
+  padding: 1% 0% 1% 30%;
+}
 
 @keyframes fadein {
   from { opacity: 0; }
