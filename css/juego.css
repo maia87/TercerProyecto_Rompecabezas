@@ -32,10 +32,22 @@ li::before {
 }
 
 #juego div {
-
   text-align: center;
   animation: fadein 2s;
+  }
+
+#juego {
+  background-color: rgb(21, 230, 117);
+  width: 600px;
+  height: 600px;
 }
+
+.pieza_rompecabezas {
+  width: 33.33%;
+  height: 33.33%;
+  border: 1px solid rgb(18, 74, 242);
+}
+
 
 @keyframes fadein {
   from { opacity: 0; }
