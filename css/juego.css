@@ -43,9 +43,9 @@ li::before {
 }
 
 .pieza_rompecabezas {
-  width: 33.33%;
-  height: 33.33%;
+  width: 33%;
   border: 1px solid rgb(18, 74, 242);
+  float: left;
 }
 
 
