@@ -1,4 +1,4 @@
-// Representación de la grilla. Cada nro representa a una pieza.
+// Representación de la grilla a través de una varibale que es una array de array. Cada nro representa a una pieza.
 // El 9 es la posición vacía
 var grilla = [
   [1, 2, 3],
@@ -6,22 +6,49 @@ var grilla = [
   [7, 8, 9]
 ];
 
-// Ac&aacute; vamos a ir guardando la posición vacía
+var grillaGanadora = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9]
+];
+
+//Vamos a ir guardando la posición vacía.
+//La variable guarda la fila y la columna de la pieza que se encuentra vacia.
 var posicionVacia = {
   fila:2,
   columna:2
 };
 
-// Esta función va a chequear si el Rompecabezas est&aacute; en la posición ganadora
-function chequearSiGano(){
+// Esta función va a chequear si el Rompecabezas está en la posición ganadora
+//
+function chequearSiGano(grilla) {
+  for (var i = 0; i < grilla.length; i++) {
+    for (var j = 0; j < grilla.length; j++) {
+      var actual = grilla[i][j];
+
+      if ( actual == grillaGanadora[i][j]) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+  }
 }
 
+chequearSiGano(grilla);
 
 
 // la hacen los alumnos, pueden mostrar el cartel como prefieran. Pero es importante que usen
 // esta función
-function mostrarCartelGanador(){
+function mostrarCartelGanador() {
+  var rtdoDeChequearSiGano = chequearSiGano(grilla);
+  if (rtdoDeChequearSiGano == true) {
+    alert ("Ganaste");
+  }
 }
+
+mostrarCartelGanador();
+
 
 // Intercambia posiciones grilla y en el DOM
 function intercambiarPosiciones(fila1, columna1, fila2, columna2){
@@ -67,7 +94,7 @@ function moverEnDireccion(direccion){
     // Completar
   }
 
-  // Se chequea si la nueva posición es válida, si lo es, se intercambia 
+  // Se chequea si la nueva posición es válida, si lo es, se intercambia
   if (posicionValida(nuevaFilaPiezaVacia, nuevaColumnaPiezaVacia)){
     intercambiarPosiciones(posicionVacia.fila, posicionVacia.columna,
     nuevaFilaPiezaVacia, nuevaColumnaPiezaVacia);
@@ -99,9 +126,9 @@ function capturarTeclas(){
       var gano = chequearSiGano();
       if(gano){
         setTimeout(function(){
-          mostrarCartelGanador();  
+          mostrarCartelGanador();
         },500);
-      } 
+      }
       evento.preventDefault();
     }
   })
