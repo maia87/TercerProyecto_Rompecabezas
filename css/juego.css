@@ -8,6 +8,7 @@ body {
   min-height: 100%;
   background-image: url(../images/adventure.jpg);
 }
+
 ul {
   padding-left: 0;
   list-style: none;
@@ -31,21 +32,10 @@ li::before {
   color: #000;
 }
 
-#juego div {
-  text-align: center;
-  animation: fadein 2s;
-  }
 
-#juego {
-  background-color: rgb(21, 230, 117);
-  width: 600px;
-  height: 600px;
-}
-
-.pieza_rompecabezas {
-  width: 33%;
-  border: 1px solid rgb(18, 74, 242);
-  float: left;
+#instrucciones li {
+  font-weight: bold;
+  font-size: 100%;
 }
 
 h1 {
@@ -60,10 +50,26 @@ h2 {
   color: rgb(116,144,121);
 }
 
-#instrucciones li {
-  font-weight: bold;
-  font-size: 100%;
+
+#juego div {
+  text-align: center;
+  animation: fadein 2s;
+  width: 33%;
+  height: 33%;
+  border: 1px solid rgb(186,228,229);
+  float: left;
 }
+
+#juego {
+  background-color: rgb(161,190,230);
+  width: 600px;
+  height: 600px;
+}
+
+#juego img {
+  width: 100%;
+}
+
 
 #pie p {
   background-color: #32514e;
@@ -72,8 +78,9 @@ h2 {
   clear:both;
   height: 15%;
   margin-top: 0%;
-  padding: 1% 0% 1% 30%;
+  padding: 1% 0% 1% 20%;
 }
+
 
 @keyframes fadein {
   from { opacity: 0; }
